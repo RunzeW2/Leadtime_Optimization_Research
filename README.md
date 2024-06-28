@@ -16,13 +16,17 @@ Dynamic Programming is a method used for solving complex problems by breaking th
 
 The main cost function we aim to optimize is given by:
 
-\[ C(T) = E \left[ \sum_{m=1}^{M} \sum_{j=1}^{N_m} h_{mj} \left( \sum_{i=1}^{N_0} T_{0i} + \sum_{i=1}^{N_m} T_{mi} - \sum_{i=j+1}^{N_m} (\tau_{mi} + E_{mi}) \right) + \sum_{j=1}^{N_0} h_{0j} \left( \sum_{i=1}^{N_0} T_{0i} - W_0 - \sum_{i=j+1}^{N_0} (\tau_{0i} + E_{0i}) \right) + (H_{01} + p)L_{01} \right] \]
+$$
+C(T) = E \left[ \sum_{m=1}^{M} \sum_{j=1}^{N_m} h_{mj} \left( \sum_{i=1}^{N_0} T_{0i} + \sum_{i=1}^{N_m} T_{mi} - \sum_{i=j+1}^{N_m} (\tau_{mi} + E_{mi}) \right) + \sum_{j=1}^{N_0} h_{0j} \left( \sum_{i=1}^{N_0} T_{0i} - W_0 - \sum_{i=j+1}^{N_0} (\tau_{0i} + E_{0i}) \right) + (H_{01} + p)L_{01} \right]
+$$
 
 ### Simplified One-Stage Assembly System
 
 For a one-stage assembly system, the cost function simplifies to:
 
-\[ C(T) = E \left[ \sum_{m=0}^{M} H_m T_m - h_0 W_0 + (H_0 + p)L_0 \right] \]
+$$
+C(T) = E \left[ \sum_{m=0}^{M} H_m T_m - h_0 W_0 + (H_0 + p)L_0 \right]
+$$
 
 ## Optimization Approach
 
@@ -67,10 +71,9 @@ The experimental results demonstrate that the SGD approach is effective in optim
 
 ## References
 
-Atan et al. (2016), "Optimal Planned Leadtimes Policy," Operations Research.
+Atan, Z., de Kok, T., Dellaert, N. P., van Boxel, R., & Janssen, F. (2016). Setting planned leadtimes in customer-order-driven assembly systems. *Manufacturing & Service Operations Management*, 18(1), 122–140.
 
 ## Author
+Minda Zhao, Runze Wang
 
-Article Short Title
 
-**Please provide the manuscript number for the final stage submission.**

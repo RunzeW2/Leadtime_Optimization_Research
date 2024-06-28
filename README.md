@@ -35,17 +35,18 @@ $$
 Instead of solving the generalized newsvendor equations, we apply SGD to directly optimize the simplified cost function. The gradients for the cost function are computed and used to iteratively update the planned lead times.
 
 **SGD Algorithm:**
+$$
 1. Initialize the planned lead times \(T_1\) arbitrarily and set the step size \(\eta_k\).
 2. At each iteration \(k\), sample the throughput times \(\{\tau^k_m\}\) and update the lead times:
 \[ T_{k+1} = T_k - \eta_k s_k(T_k, \tau^k) \]
 3. Stop the algorithm when the difference between successive iterations is small enough.
-
+$$
 ### Dynamic Programming
 
 Dynamic Programming is used to solve the cost function optimization problem by considering the dependencies between different stages of the assembly process. This approach is applied to a serial system with multiple stages.
 
 ## Experiments and Results
-
+$$
 We conducted experiments on an assembly system with two \(N_m\)-stage processes delivering subassemblies and a \(N_0\)-stage assembly process. The parameters were set as follows:
 - \(M = 2\)
 - \(N_0 = 2\)
@@ -53,7 +54,7 @@ We conducted experiments on an assembly system with two \(N_m\)-stage processes 
 - Marginal cost \(h_{mj} = 10\)
 - Penalty cost \(p = 500\)
 - Lead time follows the Erlang distribution: \(\tau_{mj} \sim \text{Erlang}(1, 1)\)
-
+$$
 ### Performance Evaluation
 
 We ran 10,000 repeated simulations and averaged the cost functions for different optimization methods. The results are summarized below:

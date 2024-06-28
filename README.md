@@ -59,6 +59,9 @@ We ran 10,000 repeated simulations and averaged the cost functions for different
 | HSGD   | 86.8               | 469.827      | 100.013      | 100.109      |
 | SGD    | 88.2               | 465.764      | 97.336       | 98.925       |
 
+
+Notes: Method Abbreviation: NV: Newsvendor, HSGD:Heuristic Stochastic Gradient Descent, SGD:Stochastic Gradient Descent, ASML: Original method by ASML company.
+
 ## Conclusion
 
 The experimental results demonstrate that the SGD approach is effective in optimizing the planned lead times, achieving the lowest penalty cost and a high on-time delivery percentage. Dynamic Programming also provides a robust framework for solving the cost function optimization problem in serial systems.

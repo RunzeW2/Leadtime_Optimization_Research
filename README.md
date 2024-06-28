@@ -9,9 +9,6 @@ This repository contains the implementation and experiments for optimizing assem
 ### Stochastic Gradient Descent (SGD)
 Stochastic Gradient Descent (SGD) is an iterative optimization algorithm used to minimize an objective function. It is particularly useful for large-scale and high-dimensional optimization problems. In our context, SGD is applied to optimize the planned lead times in an assembly system to minimize the overall cost.
 
-### Dynamic Programming
-Dynamic Programming is a method used for solving complex problems by breaking them down into simpler subproblems. It is used to solve the cost function optimization problem by considering the dependencies between different stages of the assembly process.
-
 ## Cost Function
 
 The main cost function we aim to optimize is given by:
@@ -37,24 +34,20 @@ Instead of solving the generalized newsvendor equations, we apply SGD to directl
 **SGD Algorithm:**
 
 1. Initialize the planned lead times $\(T_1\)$ arbitrarily and set the step size $\(\eta_k\)$.
-2. At each iteration $$\(k\)$$, sample the throughput times $$\(\{\tau^k_m\}\)$$ and update the lead times:
-$$\[ T_{k+1} = T_k - \eta_k s_k(T_k, \tau^k) \]$$
+2. At each iteration $\(k\)$, sample the throughput times $\(\{\tau^k_m\}\)$ and update the lead times:
+$\[ T_{k+1} = T_k - \eta_k s_k(T_k, \tau^k) \]$
 3. Stop the algorithm when the difference between successive iterations is small enough.
 
-### Dynamic Programming
-
-Dynamic Programming is used to solve the cost function optimization problem by considering the dependencies between different stages of the assembly process. This approach is applied to a serial system with multiple stages.
-
 ## Experiments and Results
-$$
-We conducted experiments on an assembly system with two \(N_m\)-stage processes delivering subassemblies and a \(N_0\)-stage assembly process. The parameters were set as follows:
-- \(M = 2\)
-- \(N_0 = 2\)
-- \(N_m = 3\)
-- Marginal cost \(h_{mj} = 10\)
-- Penalty cost \(p = 500\)
-- Lead time follows the Erlang distribution: \(\tau_{mj} \sim \text{Erlang}(1, 1)\)
-$$
+
+We conducted experiments on an assembly system with two \(N_m\)-stage processes delivering subassemblies and a $\(N_0\)$-stage assembly process. The parameters were set as follows:
+- $\(M = 2\)$
+- $\(N_0 = 2\)$
+- $\(N_m = 3\)$
+- Marginal cost $\(h_{mj} = 10\)$
+- Penalty cost $\(p = 500\)$
+- Lead time follows the Erlang distribution: $\(\tau_{mj} \sim \text{Erlang}(1, 1)\)$
+
 ### Performance Evaluation
 
 We ran 10,000 repeated simulations and averaged the cost functions for different optimization methods. The results are summarized below:
